@@ -1,7 +1,7 @@
 import ToggleSwitch from './ToggleSwitch';
 
 const Header = () => (
-  <header>
+  <header className='container'>
     <h1>Where in the world?</h1>
     <ToggleSwitch />
   </header>

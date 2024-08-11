@@ -1,42 +1,156 @@
-#root {
-  max-width: 1280px;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem;
+
+  /* primary color */
+  --White: hsl(0, 0%, 100%);
+
+  /* Light Mode */
+
+  /* text */
+  --Very-Dark-Blue: hsl(200, 15%, 8%);
+  /* input */
+  --Dark-Gray: hsl(0, 0%, 52%);
+  /* Background */
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  /* Dark Mode */
+
+  /* Elements */
+  --Dark-Blue: hsl(209, 23%, 22%);
+  /* Background */
+  --Very-Dark-Blue: hsl(207, 26%, 17%);
+
+  /* Typography */
+
+  /* Homepage Items */
+  --hp-font-size: 14px;
+  /* Detail Page */
+  --detail-font-size: 16px;
+
+  /* Font */
+  --Nunito: "Nunito Sans";
+  /* color-scheme: light dark; */
+}
+
+/* Use Board-Box Model */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* styles.css */
+
+/* General styles */
+body {
+  font-family: var(--Nunito);
+  font-size: var(--hp-font-size);
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+header {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  font-weight: 600;
+  /* padding: 1rem 3rem; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  margin: 2rem 0;
+  border: 1px solid var(--White);
+  border-radius: 4px;
+  font-weight: 300;
+  /* color: var(--Dark-Gray); */
+  /* width: 100%; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.country-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.country-card img {
+  width: 100%;
+  height: auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country-card h2 {
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.country-card p {
+  margin: 5px 0;
 }
 
-.card {
-  padding: 2em;
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-.read-the-docs {
-  color: #888;
+.search-bar input {
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+@media (width > 40em) {
 }
